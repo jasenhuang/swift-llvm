@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <CommonCrypto/CommonCryptor.h>
 
 #ifndef login_with_password
 #define login_with_password gImC6R6pqJ
@@ -32,6 +33,35 @@ void login_with_password(NSString* user, NSString* passwd)
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"calling block");
     });
+}
++ (NSData *)AESEncryptData:(NSData *)plainData key:(NSData *)key iv:(const void *)iv {
+    
+    NSAssert(plainData.length, @"Invalid plainData");
+    
+    if (!key.length) {
+        return plainData;
+    }
+    
+    size_t dataOutLength;
+    NSMutableData *cipherData = [NSMutableData dataWithLength:plainData.length + kCCBlockSizeAES128];
+    
+    CCCryptorStatus result = CCCrypt(kCCEncrypt,
+                                     kCCAlgorithmAES128,
+                                     kCCOptionPKCS7Padding,
+                                     key.bytes,
+                                     key.length,
+                                     iv,
+                                     plainData.bytes,
+                                     plainData.length,
+                                     cipherData.mutableBytes,
+                                     cipherData.length,
+                                     &dataOutLength);
+    if (result == kCCSuccess) {
+        cipherData.length = dataOutLength;
+        return cipherData;
+    } else {
+        return nil;
+    }
 }
 @end
 
