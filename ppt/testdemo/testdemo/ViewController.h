@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestClass : NSObject
-+ (void)sayClassHello:(NSString*)msg;
-- (void)sayInstanceHello:(NSString*)msg;
-@end
-
 @interface ViewController : UIViewController
 @end
 

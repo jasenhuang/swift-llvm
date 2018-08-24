@@ -448,16 +448,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_CFLAGS = (
-					"-Xclang",
-					"-load",
-					"-Xclang",
-					"/Users/jasenhuang/workspace/swift-llvm/llvm_build/Debug/lib/Obfuscate.dylib",
-					"-Xclang",
-					"-add-plugin",
-					"-Xclang",
-					obfuscate,
-				);
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.testdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -475,16 +466,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_CFLAGS = (
-					"-Xclang",
-					"-load",
-					"-Xclang",
-					"/Users/jasenhuang/workspace/swift-llvm/llvm_build/Debug/lib/Obfuscate.dylib",
-					"-Xclang",
-					"-add-plugin",
-					"-Xclang",
-					obfuscate,
-				);
+				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.testdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
