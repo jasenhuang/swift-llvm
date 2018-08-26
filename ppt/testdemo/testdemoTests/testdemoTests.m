@@ -2,8 +2,8 @@
 //  testdemoTests.m
 //  testdemoTests
 //
-//  Created by jasenhuang on 2018/8/20.
-//  Copyright © 2018 jasenhuang. All rights reserved.
+//  Created by jasenhuang on 2018/8/26.
+//  Copyright © 2018年 jasenhuang. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
@@ -15,11 +15,13 @@
 @implementation testdemoTests
 
 - (void)setUp {
+    [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [super tearDown];
 }
 
 - (void)testExample {

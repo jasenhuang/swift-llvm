@@ -23,6 +23,19 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
         [self sayInstanceHello:msg to:user];
     });
 }
+
+- (void)controlFlowFlattening __attribute__((annotate("obfuscate")))
+{
+    CFAbsoluteTime begin = CFAbsoluteTimeGetCurrent();
+    NSMutableArray * array = [NSMutableArray array];
+    int i = 0 ;
+    while(i < 100000){
+        ++i;
+        [array addObject:@(i)];
+    }
+    NSLog(@"time = %@", @(CFAbsoluteTimeGetCurrent() - begin));
+}
+
 + (NSData *)encrypt:(NSData *)plainData key:(NSData *)key iv:(const void *)iv {
     
     NSAssert(plainData.length, @"Invalid plainData");
