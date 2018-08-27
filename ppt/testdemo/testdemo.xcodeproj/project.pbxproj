@@ -440,7 +440,7 @@
 				DEVELOPMENT_TEAM = P936DZCERV;
 				INFOPLIST_FILE = testdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.testdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasenhuang.testdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,7 +454,7 @@
 				DEVELOPMENT_TEAM = P936DZCERV;
 				INFOPLIST_FILE = testdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.testdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasenhuang.testdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

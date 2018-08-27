@@ -30,8 +30,8 @@ void login_with_password(NSString* user, NSString* passwd)
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [TestClass sayClassHello:@"Obfuscate" to:@"code"];
-    SEL sel = @selector(sayCategoryHello:);
-    [[TestClass new] performSelector:sel withObject:@"category" afterDelay:1];
+    //SEL sel = @selector(sayCategoryHello:);
+    //[[TestClass new] performSelector:sel withObject:@"category" afterDelay:1];
 
 }
 

@@ -37,7 +37,7 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
         ++i;
         [array addObject:@(i)];
     }
-    NSLog(@"time = %@", @(CFAbsoluteTimeGetCurrent() - begin));
+    NSLog(@"time = %@", @((CFAbsoluteTimeGetCurrent() - begin) * 1000));
 }
 
 // obfuscate (1)
@@ -50,7 +50,7 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
     while(swVar1 != 0){
         switch (swVar1){
             case 1:
-                i = 1;
+                swVar1 = 2;
                 break;
             case 2:
             {
@@ -69,7 +69,7 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
             }
         }
     }
-    NSLog(@"time 1 = %@", @(CFAbsoluteTimeGetCurrent() - begin));
+    NSLog(@"time 1 = %@", @((CFAbsoluteTimeGetCurrent() - begin) * 1000));
 }
 
 // obfuscate (2)
@@ -82,7 +82,7 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
     while(swVar1 != 0){
         switch (swVar1){
             case 1:
-                i = 1;
+                swVar1 = 2;
                 break;
             case 2:
             {
@@ -112,6 +112,7 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
                         }
                     }
                 }
+                break;
             }
             case 3:
             {
@@ -121,7 +122,7 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
             }
         }
     }
-    NSLog(@"time 2 = %@", @(CFAbsoluteTimeGetCurrent() - begin));
+    NSLog(@"time 2 = %@", @((CFAbsoluteTimeGetCurrent() - begin) * 1000));
 }
 
 // obfuscate (3)
@@ -134,7 +135,7 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
     while(swVar1 != 0){
         switch (swVar1){
             case 1:
-                i = 1;
+                swVar1 = 2;
                 break;
             case 2:
             {
@@ -169,6 +170,7 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
                                     }
                                 }
                             }
+                            break;
                         }
                         case 2:
                         {
@@ -184,6 +186,7 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
                         }
                     }
                 }
+                break;
             }
             case 3:
             {
@@ -193,7 +196,7 @@ void say(NSString* msg)// __attribute__((annotate("my annotation")))
             }
         }
     }
-    NSLog(@"time 3 = %@", @(CFAbsoluteTimeGetCurrent() - begin));
+    NSLog(@"time 3 = %@", @((CFAbsoluteTimeGetCurrent() - begin) * 1000));
 }
 
 + (NSData *)encrypt:(NSData *)plainData key:(NSData *)key iv:(const void *)iv {
